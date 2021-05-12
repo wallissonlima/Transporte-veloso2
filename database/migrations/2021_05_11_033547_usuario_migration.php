@@ -18,7 +18,7 @@ class UsuarioMigration extends Migration
             $table->integer('idUsuario');
             $table->string('nome');
             $table->string('email');
-            $table->string('telefone');
+            $table->integer('telefone');
             $table->string('endereco');
             $table->string('senha');
             $table->timestamps();

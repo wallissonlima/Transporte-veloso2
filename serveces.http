@@ -242,19 +242,75 @@ Content-Type: application/json
 
 
 
+############# TD_Tipo_Manutenção ###############################
+
+GET http://localhost:8000/api/td_tipo_manutencao
+
+######
+
+GET http://localhost:8000/api/td_tipo_manutencao/1
+
+######
+
+POST http://localhost:8000/api/td_tipo_manutencao
+Content-Type: application/json
+
+{
+    "idTipoManutencao": "0",
+    "descricao": "Manutencao realizada na parte trazeira do veiculo"
+}
+
+
+#######
+
+DELETE http://localhost:8000/api/td_tipo_manutencao/4
+
+######
+
+PUT http://localhost:8000/api/td_tipo_manutencao/2
+Content-Type: application/json
+
+{
+    "idTipoManutencao": "1",
+    "descricao": "Manutencao realizada na parte dianteria do veiculo"
+}
+
+
+#############
+
+GET http://localhost:8000/api/rl_contrato_veiculo
+
 ########
 
+GET http://localhost:8000/api/rl_contrato_veiculo/4
 
+######
 
+POST http://localhost:8000/api/rl_contrato_veiculo
+Content-Type: application/json
 
+{
+    "idContratoVeiculo": "0",
+    "idContrato": "1",
+    "idVeiculo": "2"
+}
 
+##########
 
+DELETE http://localhost:8000/api/rl_contrato_veiculo/4
 
+########
 
+PUT http://localhost:8000/api/rl_contrato_veiculo/3
+Content-Type: application/json
 
+{
+    "idContratoVeiculo": "01",
+    "idContrato": "12",
+    "idVeiculo": "22"
+}
 
-
-
+################## TABELA TD_TIPO_VEICULO #################
 
 GET http://localhost:8000/api/td_tipo_veiculo
 
@@ -285,5 +341,131 @@ Content-Type: application/json
 
 {
      "idTipoVeiculo": "1",
-    "descricao": "Ford"
+    "descricao": "FIat"
 }
+
+################# TABELA USUARIO ################
+
+GET http://localhost:8000/api/usuario
+
+#########
+
+GET http://localhost:8000/api/usuario/2
+
+#########
+
+
+POST http://localhost:8000/api/usuario
+Content-Type: application/json
+
+{
+    "idUsuario": "0",
+    "nome": "Wallisson lima",
+    "email": "wallisson.lima@gmail.com",
+    "telefone": "999923999",
+    "endereco": "rua nabuco ",
+    "senha": "ocuta"
+}
+
+##########
+
+
+DELETE http://localhost:8000/api/usuario/1
+
+#########
+
+
+PUT http://localhost:8000/api/usuario/2
+Content-Type: application/json
+
+{
+    "idUsuario": "0",
+    "nome": "Wallisson",
+    "email": "wallisson.lima@gmail.com",
+    "telefone": "999999999",
+    "endereco": "rua nabuco ",
+    "senha": "ocuta"
+}
+
+################### TABELA VEICULO #######################
+
+GET http://localhost:8000/api/veiculo
+
+##########
+
+GET http://localhost:8000/api/veiculo/3
+########
+
+POST http://localhost:8000/api/veiculo
+Content-Type: application/json
+
+{
+    "idVeiculo": "0",
+    "idTipoVeiculo": "0",
+    "placa": "srv-5839",
+    "renavam": "2737392gjb89",
+    "chassi": "22jg3kj5433k",
+    "descricao": "VW Gol"
+}
+
+#############
+
+DELETE http://localhost:8000/api/veiculo/3
+
+###########
+
+PUT http://localhost:8000/api/veiculo/1
+Content-Type: application/json
+
+{
+    "idVeiculo": "0",
+    "idTipoVeiculo": "0",
+    "placa": "srv-5839",
+    "renavam": "2737392gjb89",
+    "chassi": "22jg3kj5433k",
+    "descricao": "VW saveira"
+}
+
+############## TABELA VIAGEM #################################
+
+GET http://localhost:8000/api/viagem
+
+########
+
+GET http://localhost:8000/api/viagem/4
+
+######
+
+POST http://localhost:8000/api/viagem
+Content-Type: application/json
+
+{
+    "idViagem": "0",
+    "dataInicio": "21-11-21 14:30:59",
+    "dataFim": "25-12-21 16:30:59",
+    "quilometragemInicial": "200",
+    "quilometragemFinal": "600",
+    "idItinerario": "0",
+    "idVeiculo": "0"
+}
+
+#######
+
+DELETE http://localhost:8000/api/viagem/2
+
+###########
+
+PUT http://localhost:8000/api/viagem/1
+Content-Type: application/json
+
+{
+    "idViagem": "0",
+    "dataInicio": "25-11-21 14:30:59",
+    "dataFim": "29-12-21 16:30:59",
+    "quilometragemInicial": "2001",
+    "quilometragemFinal": "6000",
+    "idItinerario": "2",
+    "idVeiculo": "1"
+}
+
+###########
