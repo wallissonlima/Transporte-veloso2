@@ -15,12 +15,12 @@ class ConsumoMigration extends Migration
     {
         Schema::create('Consumo', function (Blueprint $table) {
             $table->id();
-            $table->integer('idConsumo')->nullable();
-            $table->integer('quilometragem')->nullable();
+            $table->integer('idConsumo');
+            $table->integer('quilometragem');
             $table->dateTime('dataAbastecimento');
             $table->decimal('valorLitroCombustivel', $precision = 18, $scale = 3);
             $table->decimal('valorAbastecido', $precision = 18, $scale = 2);
-            $table->integer('idVeiculo')->nullable();
+            $table->integer('idVeiculo');
             $table->timestamps();
         });
     }

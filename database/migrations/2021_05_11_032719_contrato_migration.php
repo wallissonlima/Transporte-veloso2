@@ -15,7 +15,7 @@ class ContratoMigration extends Migration
     {
         Schema::create('Contrato', function (Blueprint $table) {
             $table->id();
-            $table->integer('idCantrato');
+            $table->integer('idConsumo');
             $table->integer('numero');
             $table->decimal('valor', $precision = 18, $scale = 2);
             $table->dateTime('dataAssinatura', $precision = 0);

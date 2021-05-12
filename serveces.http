@@ -13,11 +13,12 @@ POST http://localhost:8000/api/consumo
 Content-Type: aplication/jason
 
 {
-    
+    "idConsumo": "1",
     "quilometragem": "20000000",
     "dataAbastecimento": "231221 ",
     "valorLitroCombustivel": "3",
-    "valorAbastecido": "2"
+    "valorAbastecido": "2",
+    "idVeiculo": "12"
     
     
 
