@@ -1,0 +1,39 @@
+
+
+GET http://localhost:8000/api/consumo
+
+
+####
+
+GET http://localhost:8000/api/consumo/1
+
+####
+
+POST http://localhost:8000/api/consumo
+Content-Type: aplication/jason
+
+{
+    
+    "quilometragem": "20000000",
+    "dataAbastecimento": "231221 ",
+    "valorLitroCombustivel": "3",
+    "valorAbastecido": "2"
+    
+    
+
+}
+
+####
+
+DELETE http://localhost:8000/api/consumo
+
+####
+
+PUT http://localhost:8000/api/consumo
+Content-Type: application/json
+
+{
+
+}
+
+##############################################
