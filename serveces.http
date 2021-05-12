@@ -10,31 +10,280 @@ GET http://localhost:8000/api/consumo/1
 ####
 
 POST http://localhost:8000/api/consumo
-Content-Type: aplication/jason
+Content-Type:  application/json
 
 {
-    "idConsumo": "1",
-    "quilometragem": "20000000",
-    "dataAbastecimento": "231221 ",
-    "valorLitroCombustivel": "3",
-    "valorAbastecido": "2",
-    "idVeiculo": "12"
-    
-    
+    "idConsumo": "0",
+    "quilometragem": "30777788",
+    "dataAbastecimento": "22-05-21 13:10:00 ",
+    "valorLitroCombustivel": "7",
+    "valorAbastecido": "11",
+    "idVeiculo": "0"
 
 }
 
 ####
 
-DELETE http://localhost:8000/api/consumo
+DELETE http://localhost:8000/api/consumo/3
 
 ####
 
-PUT http://localhost:8000/api/consumo
+PUT http://localhost:8000/api/consumo/4
 Content-Type: application/json
 
 {
+    "idConsumo": "0",
+    "quilometragem": "10777788",
+    "dataAbastecimento": "25-07-22 13:10:00 ",
+    "valorLitroCombustivel": "6",
+    "valorAbastecido": "2",
+    "idVeiculo": "0"
+    
+}
+
+
+####################### Tabela Contrato ###########################
+
+GET http://localhost:8000/api/contrato 
+
+#####
+
+GET http://localhost:8000/api/contrato/1
+
+######
+
+
+POST http://localhost:8000/api/contrato
+Content-Type: application/json
+
+{
+    "idContrato": "0",
+    "numero": "9277",
+    "valor": "4",
+    "dataAssinatura": "25-03-21 13:10:00",
+    "dataTermino": "15-08-25 15:10:00",
+    "descricao": "contrato onibus",
+    "arquivo": "assinatura"
+}
+
+######
+
+DELETE http://localhost:8000/api/contrato/2
+
+######
+
+PUT http://localhost:8000/api/contrato/3
+Content-Type: application/json
+
+{
+    "idContrato": "1",
+    "numero": "224477",
+    "valor": "6",
+    "dataAssinatura": "25-03-20 13:10:00",
+    "dataTermino": "19-08-26 15:10:00",
+    "descricao": "contrato em abertos",
+    "arquivo": "assinatura"
+}
+
+####### Tabela Itinerario ##########################################
+
+GET http://localhost:8000/api/itinerario
+
+#####
+
+GET http://localhost:8000/api/itinerario/2
+
+########
+
+POST http://localhost:8000/api/itinerario
+Content-Type: application/json
+
+{
+    "idItinerario": "0",
+    "destinoInicial": "Brasilia",
+    "destinoFinal": "Goiania",
+    "caminhoPercorrido": "sentido Go 010 ",
+    "periodicidade": "paradas em todas as cidades"
+}
+
+########
+
+DELETE http://localhost:8000/api/itinerario/2
+
+#######
+
+PUT http://localhost:8000/api/itinerario/4
+Content-Type: application/json
+
+{
+    "idItinerario": "1",
+    "destinoInicial": "Brasilia",
+    "destinoFinal": "Rio de Janeiro",
+    "caminhoPercorrido": "sentido sao paulo ",
+    "periodicidade": "paradas em todas as cidades"
+}
+
+############ Tabela Manutencao #################################
+
+GET http://localhost:8000/api/manutencao
+
+########
+
+GET http://localhost:8000/api/manutencao/3
+
+#######
+
+POST http://localhost:8000/api/manutencao
+Content-Type: application/json
+
+{
+    "idManutencao": "0",
+    "idVeiculo": "0",
+    "dataManutencao": "21-11-21  14:30:59",
+    "valorManutencao": "5",
+    "descricao": "Troca de oleo",
+    "idTipoManutencao": "0",
+    "idPeca": "0",
+    "idMaoDeObra": "0"
 
 }
 
-##############################################
+######
+
+DELETE http://localhost:8000/api/manutencao/2
+
+########
+
+PUT http://localhost:8000/api/manutencao/4
+Content-Type: application/json
+
+{
+   "idManutencao": "1",
+    "idVeiculo": "2",
+    "dataManutencao": "21-11-21  14:30:59",
+    "valorManutencao": "5",
+    "descricao": "Troca de oleo",
+    "idTipoManutencao": "3",
+    "idPeca": "4",
+    "idMaoDeObra": "5" 
+}
+
+
+###### TABELA MAO DE OBRA ######################################
+
+GET http://localhost:8000/api/mao_de_obra
+
+######
+
+GET http://localhost:8000/api/mao_de_obra/3
+
+######
+
+POST http://localhost:8000/api/mao_de_obra
+Content-Type: application/json
+
+{
+    "idMaoDeObra": "0",
+    "descricao": "servico feito na roda trazeira ",
+    "valor": "1200"
+}
+
+########
+
+DELETE http://localhost:8000/api/mao_de_obra/3
+
+#######
+
+PUT http://localhost:8000/api/mao_de_obra/1
+Content-Type: application/json
+
+{
+    "idMaoDeObra": "1",
+    "descricao": "servico feito na roda trazeira ",
+    "valor": "2000"
+}
+
+######## TABELA PEÇAS ##############################################
+
+GET http://localhost:8000/api/pecas
+
+#######
+
+GET http://localhost:8000/api/pecas/2
+
+#######
+
+POST http://localhost:8000/api/pecas
+Content-Type: application/json
+
+{
+    "idPeca": "0",
+    "nome": "pneus",
+    "quantidade": "3",
+    "valor": "200"
+}
+
+############
+
+DELETE http://localhost:8000/api/pecas/3
+
+
+##########
+
+PUT  http://localhost:8000/api/pecas/4
+Content-Type: application/json
+
+{
+    "idPeca": "1",
+    "nome": "Rodas",
+    "quantidade": "4",
+    "valor": "2000"
+}
+
+
+
+########
+
+
+
+
+
+
+
+
+
+
+
+
+
+GET http://localhost:8000/api/td_tipo_veiculo
+
+####
+
+GET http://localhost:8000/api/td_tipo_veiculo/1
+
+####
+
+
+POST http://localhost:8000/api/td_tipo_veiculo
+Content-Type: aplication/json
+
+{
+    "idTipoVeiculo": "0",
+    "descricao": "Ford"
+}
+
+####
+
+DELETE http://localhost:8000/api/td_tipo_veiculo/1
+
+
+####
+
+PUT http://localhost:8000/api/td_tipo_veiculo/2
+Content-Type: application/json
+
+{
+     "idTipoVeiculo": "1",
+    "descricao": "Ford"
+}
