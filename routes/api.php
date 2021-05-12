@@ -92,15 +92,15 @@ use Illuminate\Support\Facades\Route;
             Route::PUT('/rl_contrato_veiculo/{id}', 'App\Http\Controllers\RL_Contrato_VeiculoController@update');
 
 
-            Route::GET('/td_tipo_nanutencao', 'App\Http\Controllers\TD_Tipo_ManutencaoController@index');
+            Route::GET('/td_tipo_manutencao', 'App\Http\Controllers\TD_Tipo_ManutencaoController@index');
 
-            Route::GET('/td_tipo_nanutencao/{id}', 'App\Http\Controllers\TD_Tipo_ManutencaoController@show');
+            Route::GET('/td_tipo_manutencao/{id}', 'App\Http\Controllers\TD_Tipo_ManutencaoController@show');
 
-            Route::POST('/td_tipo_nanutencao', 'App\Http\Controllers\TD_Tipo_ManutencaoController@create');
+            Route::POST('/td_tipo_manutencao', 'App\Http\Controllers\TD_Tipo_ManutencaoController@create');
 
-            Route::DELETE('/td_tipo_nanutencao/{id}', 'App\Http\Controllers\TD_Tipo_ManutencaoController@destroy');
+            Route::DELETE('/td_tipo_manutencao/{id}', 'App\Http\Controllers\TD_Tipo_ManutencaoController@destroy');
 
-            Route::PUT('/td_tipo_nanutencao/{id}', 'App\Http\Controllers\TD_Tipo_ManutencaoController@update');
+            Route::PUT('/td_tipo_manutencao/{id}', 'App\Http\Controllers\TD_Tipo_ManutencaoController@update');
 
 
             Route::GET('/td_tipo_veiculo', 'App\Http\Controllers\TD_Tipo_VeiculoController@index');

@@ -17,7 +17,7 @@ class PecasMigration extends Migration
             $table->id();
             $table->string('idPeca');
             $table->string('nome');
-            $table->integer('quatidade');
+            $table->integer('quantidade');
             $table->decimal('valor', $precision = 18, $scale = 2);
             $table->timestamps();
         });

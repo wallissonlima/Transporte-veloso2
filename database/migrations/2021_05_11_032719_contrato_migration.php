@@ -15,11 +15,11 @@ class ContratoMigration extends Migration
     {
         Schema::create('Contrato', function (Blueprint $table) {
             $table->id();
-            $table->integer('idConsumo');
+            $table->integer('idContrato');
             $table->integer('numero');
             $table->decimal('valor', $precision = 18, $scale = 2);
-            $table->dateTime('dataAssinatura', $precision = 0);
-            $table->dateTime('dataTermino', $precision = 0);
+            $table->dateTime('dataAssinatura');
+            $table->dateTime('dataTermino');
             $table->text('descricao');
            $table->string('arquivo');
             $table->timestamps();

@@ -15,15 +15,14 @@ class ManutencaoMigration extends Migration
     {
         Schema::create('Manutencao', function (Blueprint $table) {
             $table->id();
-            $table->integer('idMunutencao');
+            $table->integer('idManutencao');
             $table->integer('idVeiculo');
-            $table->dateTime('dataManutencao', $precision = 0);
+            $table->dateTime('dataManutencao');
             $table->decimal('valorManutencao', $precision = 18, $scale = 2);
             $table->string('descricao');
             $table->integer('idTipoManutencao');
             $table->integer('idPeca');
-            $table->integer('idMaoDeObra');
-            
+            $table->integer('idMaoDeObra');         
             $table->timestamps();
         });
     }
